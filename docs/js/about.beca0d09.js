@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["about"],{f820:function(t,e,l){"use strict";l.r(e);var n=function(){var t=this,e=t.$createElement;t._self._c;return t._m(0)},s=[function(){var t=this,e=t.$createElement,l=t._self._c||e;return l("div",{staticClass:"container-fluid p-3"},[l("div",{staticClass:"row"},[l("div",{staticClass:"col-sm-12 col-md-12 col-lg-12 col-xl-12"},[l("h1",[t._v("About")])])])])}],a={name:"name"},c=a,i=l("2877"),o=Object(i["a"])(c,n,s,!1,null,null,null);e["default"]=o.exports}}]);
+//# sourceMappingURL=about.beca0d09.js.map

@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["home"],{bb51:function(e,t,l){"use strict";l.r(t);var s=function(){var e=this,t=e.$createElement,l=e._self._c||t;return l("div",{staticClass:"container p-3"},[l("div",{staticClass:"row"},[l("div",{staticClass:"col-sm-12 col-md-12 col-lg-12 col-xl-12"},[l("h1",[e._v("Home")]),l("router-view")],1)])])},o=[],c={name:"home"},n=c,a=l("2877"),i=Object(a["a"])(n,s,o,!1,null,null,null);t["default"]=i.exports}}]);
+//# sourceMappingURL=home.6a41c742.js.map
