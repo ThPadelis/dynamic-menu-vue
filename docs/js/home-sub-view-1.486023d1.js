@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["home-sub-view-1"],{fb38:function(e,n,t){"use strict";t.r(n);var u=function(){var e=this,n=e.$createElement;e._self._c;return e._m(0)},i=[function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("div",[t("h4",[e._v("Sub view 1")])])}],r={name:"sub-view-1"},s=r,c=t("2877"),l=Object(c["a"])(s,u,i,!1,null,null,null);n["default"]=l.exports}}]);
-//# sourceMappingURL=home-sub-view-1.486023d1.js.map
