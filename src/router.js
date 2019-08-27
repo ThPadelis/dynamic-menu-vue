@@ -25,7 +25,7 @@ export default new Router({
       children: [
         {
           path: "sub-view-1",
-          name: "sub-view-1",
+          name: "What is Lorem Ipsum?",
           component: () =>
             import(
               /* webpackChunkName: "home-sub-view-1" */ "./components/Home/SubView1.vue"
@@ -36,7 +36,7 @@ export default new Router({
         },
         {
           path: "sub-view-2",
-          name: "sub-view-2",
+          name: "Why do we use it?",
           component: () =>
             import(
               /* webpackChunkName: "home-sub-view-2" */ "./components/Home/SubView2.vue"
