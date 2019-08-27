@@ -55,6 +55,15 @@ export default new Router({
       meta: {
         visible: true
       }
+    },
+    {
+      path: "*",
+      name: "not-found",
+      component: () =>
+        import(/* webpackChunkName: "not-found" */ "./views/NotFound.vue"),
+      meta: {
+        visible: false
+      }
     }
   ]
 });
