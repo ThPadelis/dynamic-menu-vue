@@ -3,13 +3,22 @@
     <li v-if="isVisible" class="nav-item rounded shadow-sm mb-2">
       <router-link
         exact-active-class="text-success"
-        :to="{name: route.name}"
+        :to="{
+          name: route.name,
+          params: { id: isRandom ? id : isSpecific ? 1 : null },
+        }"
         class="nav-link"
-      >{{name}}</router-link>
+        >{{ name }}</router-link
+      >
     </li>
 
     <div v-if="route.children && route.children.length">
-      <menu-item v-for="(r,i) in route.children" :key="i" :route="r" class="ml-3"></menu-item>
+      <menu-item
+        v-for="(r, i) in route.children"
+        :key="i"
+        :route="r"
+        class="ml-3"
+      ></menu-item>
     </div>
   </div>
 </template>
@@ -19,8 +28,8 @@ export default {
   name: "menu-item",
   props: {
     route: {
-      type: Object
-    }
+      type: Object,
+    },
   },
   computed: {
     isVisible() {
@@ -36,9 +45,21 @@ export default {
       return this.route.name
         .toLowerCase()
         .split("-")
-        .map(s => s.charAt(0).toUpperCase() + s.slice(1))
+        .map((s) => s.charAt(0).toUpperCase() + s.slice(1))
         .join(" ");
-    }
-  }
+    },
+    isUserID() {
+      return this.route.name === "user";
+    },
+    isRandom() {
+      return this.route.name === "user";
+    },
+    isSpecific() {
+      return this.route.name === "user-specific";
+    },
+    id() {
+      return Math.floor(Math.random() * 100);
+    },
+  },
 };
 </script>

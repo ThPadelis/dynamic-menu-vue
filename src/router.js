@@ -11,8 +11,8 @@ export default new Router({
       path: "/",
       redirect: { path: "/home" },
       meta: {
-        visible: false
-      }
+        visible: false,
+      },
     },
     {
       path: "/home",
@@ -20,32 +20,28 @@ export default new Router({
       component: () =>
         import(/* webpackChunkName: "home" */ "./views/Home.vue"),
       meta: {
-        visible: true
+        visible: true,
       },
       children: [
         {
           path: "sub-view-1",
           name: "sub-view-1",
           component: () =>
-            import(
-              /* webpackChunkName: "home-sub-view-1" */ "./components/Home/SubView1.vue"
-            ),
+            import(/* webpackChunkName: "home-sub-view-1" */ "./components/Home/SubView1.vue"),
           meta: {
-            visible: true
-          }
+            visible: true,
+          },
         },
         {
           path: "sub-view-2",
           name: "sub-view-2",
           component: () =>
-            import(
-              /* webpackChunkName: "home-sub-view-2" */ "./components/Home/SubView2.vue"
-            ),
+            import(/* webpackChunkName: "home-sub-view-2" */ "./components/Home/SubView2.vue"),
           meta: {
-            visible: true
-          }
-        }
-      ]
+            visible: true,
+          },
+        },
+      ],
     },
     {
       path: "/about",
@@ -53,8 +49,26 @@ export default new Router({
       component: () =>
         import(/* webpackChunkName: "about" */ "./views/About.vue"),
       meta: {
-        visible: true
-      }
+        visible: true,
+      },
+    },
+    {
+      path: "/user/:id",
+      name: "user-specific",
+      component: () =>
+        import(/* webpackChunkName: "user-view" */ "./components/Home/User.vue"),
+      meta: {
+        visible: true,
+      },
+    },
+    {
+      path: "/user/:id",
+      name: "user",
+      component: () =>
+        import(/* webpackChunkName: "user-view" */ "./components/Home/User.vue"),
+      meta: {
+        visible: true,
+      },
     },
     {
       path: "*",
@@ -62,8 +76,8 @@ export default new Router({
       component: () =>
         import(/* webpackChunkName: "not-found" */ "./views/NotFound.vue"),
       meta: {
-        visible: false
-      }
-    }
-  ]
+        visible: false,
+      },
+    },
+  ],
 });
